@@ -86,4 +86,35 @@ const str = "hello there today is wednesday"
 
 console.log(arr.length)
 console.log(str.split(","))
-//
+
+// const sentence = prompt("type in a sentence")
+
+// const sent_split = sentence.split(" ")
+
+// const numWords = sent_split.length
+
+const str1 = "hello"
+const str2 = " world"
+// console.log("this sentence has "+ numWords+" words in it")
+// console.log(`this sentence has ${numWords} words in it`)
+
+// console.log(str1.concat(str2).concat("javascript "))
+
+const str3 = "javascript is the java of the java javascript is the java of the javajavascript is the java of the javajavascript is the java of the javajavascript is the java of the javajavascript is the java of the javajavascript is the java of the javajavascript is the java of the javajavascript is the java of the java"
+// console.log(str3.replace("java", "python"))
+// console.log(str3.substring(0, 70)+"....")
+
+const str4 = "the sky is blue but was dark yesterday"
+// console.log(str4.indexOf("but"))
+
+// console.log(str4.charAt(1))
+
+const sentence = prompt("type in a sentence")
+const word = prompt("type in a word in that sentence")
+
+const index = sentence.indexOf(word)
+
+console.log(`The word ${word} is found at index ${index} in the string ${sentence}`)
+
+
+// console.log(`the word \"boy\" is for a male being`)
