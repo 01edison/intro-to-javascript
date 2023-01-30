@@ -118,3 +118,81 @@ console.log(`The word ${word} is found at index ${index} in the string ${sentenc
 
 
 // console.log(`the word \"boy\" is for a male being`)
+
+//class work
+//hello,today,is,tuesday
+// const response = prompt("type in comma seperated words")
+// const res_arr = response.split(",")
+// const length = res_arr.length
+
+// console.log(`You typed in ${length} number of words`)
+// ARRAYS
+
+
+
+// arr[2] = "hello"
+// console.log(arr)
+// const arr = ["a", "b", "c", "d", "e", 1, 2, 3,]
+
+// console.log(arr[arr.length - 1])
+//METHODS
+//push
+
+// arr.push("hello")
+// console.log(arr)
+
+
+//unshift
+// arr.unshift("today")
+// console.log(arr)
+
+//slice
+// console.log(arr.slice(1, 7)) // "b", "c","d", "e", 1,2
+
+// console.log(arr.slice(3, 5)) // "d", "e"
+
+// console.log(arr.slice()) // returns a copy of the array
+
+// console.log(arr.slice(-1))
+
+// console.log(arr.slice(-5, -1))
+
+//concat 
+const arr2 = ["p",1, 2, 3, 4, 5, 6, "a","b", 24]
+// console.log(arr.concat(arr2))
+
+
+// const first = arr2.slice(0, 1)
+// console.log(first)
+
+// const last = arr2.slice(-1)
+// console.log(last)
+
+// console.log(first.concat(last))
+// // [1, "b"]
+
+//splice
+
+const arr3 = ["a", "b", "c", "d", "e"]
+
+// console.log(arr3.splice(0, 3))
+
+// console.log(arr3)
+
+/**
+ * 1. prompt them for the index to start from
+ * 2. prompt them for how many elements to remove starting from that index
+ * 3. log the removed items
+ */
+// const fruits = ["mango", "apple", "orange", "banana", "grape"]
+
+// const index = prompt("what index?")
+// const howMany = prompt("delete how many?")
+
+// console.log(fruits.splice(index, howMany))
+console.log(arr3)
+arr3.splice(2, 3, "hello")
+
+console.log(arr3)
+// console.log(arr3)
+
