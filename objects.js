@@ -196,3 +196,76 @@ arr3.splice(2, 3, "hello")
 console.log(arr3)
 // console.log(arr3)
 
+
+//POP 
+const arr4 = ["a", "b", "c", "d", "e"]
+
+console.log(arr4.pop())
+
+
+//SORT
+
+// const fruits = ["mango", "apple", "orange", "peach"]
+
+// console.log(fruits.sort())
+
+// const fruits2 = ["mango", "apple", "orange", "WATERMELON", "GRAPE", "GUAVA"]
+// console.log(fruits2.sort())
+
+// const nums = [22, 3, 5, 1, 18, 7]
+//ascending
+// console.log(nums.sort((a, b) => a - b))
+// [3, 22, 5, 1, 18, 7]
+// [3, 5, 22, 1, 18, 7]
+// [3, 5, 1, 22, 18, 7]
+// [3, 5, 1, 18, 22, 7]
+// [3, 5, 1, 18, 7, 22]
+// [3, 1, 5, 18, 7, 22]
+// [1, 3, 5, 18, 7, 22]
+// [1, 3, 5, 7, 18, 22]
+
+// console.log(nums.sort((a, b) => b - a))
+// //descending
+// [22, 5, 3, 1, 18, 7]
+// [22, 5, 3, 18, 1, 7]
+// [22, 5, 18, 3, 1, 7]
+// [22, 18, 5, 3, 1, 7]
+// [22, 18, 5, 3, 7, 1]
+// [22, 18, 5, 7, 3, 1]
+// [22, 18, 7, 5, 3, 1]
+
+//JOIN
+// const str5 = "hello,world,today,is,wednesday"
+// const arr = str5.split(",")
+// console.log(arr.join("&"))
+
+// const fruits = ["mango", "apple", "orange", "peach"]
+
+// console.log("[" + fruits.join(" ") + "]")
+// console.log(`[${fruits.join(" ")}]`)
+// [mango apple orange peach]
+
+// hello,today,is,wednesday => hello&today&is&wednesday
+
+// const response = prompt("type in comma seperated words")
+// const res_arr = response.split(",")
+// const answer = res_arr.join("&")
+// console.log(answer)
+
+const arr7 = [2, 5, 14, 9, 8, 5, 65, 77, 22]
+const words = ["hello", "hi","how"]
+// const sep = prompt("type in a seperator")
+// console.log(arr7.sort((a, b)=>a-b).join(sep))
+// 2-5-5-8-9-14-22-65-77
+
+//REVERSE
+
+// console.log(arr7.reverse())
+
+const response = prompt("type in a word") // civic rotor radar level kayak madam refer rotator
+
+"civic is a palindrome"
+"hello is not a palindrome"
+
+//ASSIGNMENT
+//"the quick brown fox jumps over the lazy dog"  => "dog lazy the over jumps fox brown quick the" 
