@@ -269,3 +269,131 @@ const response = prompt("type in a word") // civic rotor radar level kayak madam
 
 //ASSIGNMENT
 //"the quick brown fox jumps over the lazy dog"  => "dog lazy the over jumps fox brown quick the" 
+
+// console.log("the quick brown fox jumps over the lazy dog".split(" ").reverse().join(" "))
+
+//FUNCTIONS
+
+function sum(a, b) {
+    return (a + b)
+}
+
+// sum(3, 5)
+// sum(4, 5)
+// sum(3, 9)
+// sum(123, 5)
+
+
+function sub(a, b) {
+    return (a - b)
+}
+
+// // sub(4, 3)
+
+// function square(a) {
+//     console.log(a * a)
+//     console.log(a ** 2)
+// }
+
+// square(5)
+
+// function greet(name) {
+//     console.log(`Hello ${name}`)
+// }
+
+// greet("Peace")
+
+function max(a, b) {
+    if (a > b) {
+        console.log(`${a} is larger than ${b}`)
+    } else {
+        console.log(`${b} is larger than ${a}`)
+    }
+}
+
+// max(23, 20)
+
+// function isEven(num){
+//     //tell you if its odd or even
+
+// }
+// isEven(2)  // 2 is even
+// isEven(5)  // 5 is odd
+
+// function numWords(sentence){
+//     const arr = sentence.split(" ")
+//     const num = arr.length;
+//     console.log(`There are ${num} words in this sentence`)
+// }
+
+// numWords("today is a good day to code") // 7 words in this sentence
+// numWords("today is a good day") // 7 words in this sentence
+// numWords("good day to code") // 7 words in this sentence
+
+
+function areaOfCircle(r) {
+    const pi = 3.142
+
+    console.log(pi * r * r)
+}
+
+// const area = areaOfCircle(7)
+// console.log(area)
+// console.log(area + 7)
+
+function bmiCalculator(weight, height) {
+    //less than 18.5 => underweight
+    // between 18.5 and 24.9 => normal weight
+    // anything else => overweight
+
+    const bmi = weight / (height * height)
+
+    if (bmi < 18.5) {
+        return "Underweight"
+    } else if (bmi >= 18.5 && bmi <= 24.9) {
+        return "Normal weight"
+    } else {
+        return "Overweight"
+    }
+}
+
+// const response = bmiCalculator(100, 2)
+// console.log(response)
+
+
+
+// console.log(calculator(sub, 4, 6))
+
+
+
+// // const calculator = function (fn, a, b) {
+// //     return fn(a, b)
+// // }
+
+// function calculator(fn, a, b){
+//     return fn(a, b)
+// }
+
+//SCOPE
+//EXAMPLE 1
+// let x = 10
+
+// function myFunc() {
+//     let y = 5;
+//     console.log(x + y)
+// }
+
+// console.log(x)
+// console.log(y)
+
+
+//EXAMPLE 2
+
+// let x = 10
+// function myFunc (){
+//     x = 5
+//     console.log(x)
+// }
+// console.log(x)
+// myFunc()
+// console.log(x)
