@@ -397,3 +397,211 @@ function bmiCalculator(weight, height) {
 // console.log(x)
 // myFunc()
 // console.log(x)
+
+
+/*
+//EXAMPLE 3
+let x = 10
+function myFunct (){
+    let x = 5 // (note: let x = 5, was declared here)
+    console.log(x)
+}
+console.log(x) // 10
+myFunct () // 5
+console.log(x) // 10 (note: we got 10 here because let x = 5 was declared again inside the function)
+*/
+
+/*
+//SCOPE EXAMPLE 4
+let x = 10
+function myFunction (){
+    let x = 5
+    function myInnerFunction(){
+        console.log(x)
+    }
+    myInnerFunction()
+}
+console.log(x) // 10
+myFunction() // 10
+*/
+
+/*
+function areaOfTriangle(base, height){
+    let area = (0.5* base * height);
+    return area
+}
+console.log(areaOfTriangle(7,8)) // 28
+*/
+
+/*
+function Farenheit(celcius){
+    const area = (celcius*9/5)+32
+    return area
+}
+console.log(Farenheit(37)) // 98.6
+*/
+
+/*
+//EXAMPLE ON RANDOM NUMBER 
+const arr = ["john","mary","cynthia"]
+
+function whoIsPaying(arr){
+
+    const n = arr.length
+    let who = Math.random() * n // gives any number lesser than value of n
+    who = Math.floor(who) //  convert number to a whole number
+    return `${arr[who]} is paying for dinner`
+}
+//console.log(arr[0]) // john
+//console.log(Math.floor(Math.random()*4)) // any number lesser than 4
+console.log(whoIsPaying(arr))
+*/
+
+//DEFAULT PARAMETER
+/*
+function add5 (x, y = 5){
+    return x + y
+}
+console.log(add5(5))// 10 
+console.log(add(5,10)) //15
+console.log(add5(15))// 20
+*/
+
+/*
+function multiplyBy3 (x = 5, y){
+    return x * y
+}
+console.log(multiplyBy3(undefined,5)) // 25 
+console.log(multiplyBy3(5,10)) // 50
+console.log(multiplyBy3(undefined,20))// 100
+*/
+
+/*
+function multiplyBy3 (x, y = 3){
+    return x * y
+}
+console.log(multiplyBy3(5)) // 15 
+console.log(multiplyBy3(5,10)) // 50
+console.log(multiplyBy3(20))// 60
+*/
+
+/*
+function greet(name = "stranger"){
+    console.log(`hello ${name}`)
+}
+greet() // hello stranger
+greet("") // hello
+*/
+
+/*
+//CLASS WORK
+function concatenate(input1 = "hello", input2 = "default"){
+    console.log(`${input1} ${input2}`)
+
+}
+concatenate('hi') //hi default
+concatenate("welcome") //welcome default
+concatenate("hello","world") //hello world
+concatenate("goodday","Jim") //goodday Jim
+concatenate() // hello defaulf
+*/
+
+// www.https://mathisfun.com/leap-years
+
+// console.log("hello")
+
+function isLeapYear(year) {
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                console.log("leap year")
+            } else {
+                console.log("not leap year")
+            }
+        } else {
+            console.log("leap year")
+        }
+    } else {
+        console.log("not leap year")
+    }
+}
+
+//FOR LOOPS
+
+/**
+ * for (initialization ; condition ; operation){
+ *      //code 
+ * }
+ */
+
+const str5 = "Hello World"
+
+for (let i = 0; i < str5.length; i++) {
+    // console.log(str5[i])
+}
+
+for (let i = 0; i <= 10; i++) {
+    // console.log(i)
+}
+
+//classwork
+for (let i = 20; i >= 0; i--) {
+    // console.log(i)
+}
+
+
+let word4 = "javascript"
+let letter = "a"
+// let newWord = ""
+let count = 0
+
+for (let i = 0; i < word4.length; i++) {
+    if (letter == word4[i]) {
+        count++
+    }
+}
+// console.log(count)
+
+
+let total = 0
+for (let i = 0; i <= 10; i++) {
+    total += i //total = total + i
+}
+// console.log(total)
+
+
+
+// const arr = [3, 6, 7, 8, 9, 10]
+// let total2 = 0
+// for (let i = 0; i < arr.length; i++) {
+//     total2 += arr[i]
+//     // console.log(total2)
+// }
+// console.log(total2)
+
+//ASSIGNMENT 1
+//1 x 2 = 2
+//2 x 2 = 4
+//3 x 2 = 6
+//4 x 2 = 8
+//5 x 2 = 10
+//6 x 2 = 12
+//7 x 2 = 14
+
+//ASSIGNMENT 2
+// "javascript"  => "jvscript"
+// "hello" => "heo"
+
+// let word = "javascript"
+// let letterToRemove = "a"
+// let newWord = ""
+
+
+const arr = [3, 6, 7, 8, 9, 10]
+let total2 = 0
+
+arr.forEach(function (item) {
+    total2 += item
+})
+
+console.log(total2)
