@@ -3,8 +3,95 @@ let x = 5  // the "let" keyword allows you to create variables that you can re-a
 
 const y = 6 // the "const" keyword allow you to create variables that cannot be changed later
 
+//DATA TYPES
+// strings
+// numbers
+// booleans (true or false)
+// objects
+// arrays
+
+//STRING
+// console.log('hello')
+const str1 = "Hello"
+const str2 = "100"
+const str3 = "World"
+
+
+console.log(str1[0])  // H
+// console.log(typeof str2)
+// console.log(typeof x)
+
+// console.log(str1 + " " + str3)
+
+//classwork
+// const name2 = prompt("type in your name")
+// console.log(`Hello ${name2}`)
+
+
+const str4 = "Today is a good day."
+// const str5 = "Today,is,a,good,day"
+//LENGTH 
+// console.log(str4.length)
+
+//SPLIT 
+const arr1 = str4.split(" ")
+// console.log(arr1)
+
+// const arr2 = str5.split(",")
+// console.log(arr2.length)
+
+//charAt
+console.log(str4.charAt(1))
+
+//indexOf
+console.log(str4.indexOf("T"))
+console.log(str4.indexOf("good"))
+
+//classwork
+// const sentence = prompt("type in a sentence")
+// const arr3 = sentence.split(" ")
+// const numWords = arr3.length
+
+// console.log(`There are ${numWords} words in this sentence`)
+
+//assignment
+
+//first prompt => Today was a fun day 
+//second prompt => fun
+// output => The word fun is found at index 12 in the sentence
+
+//NUMBERS
 //ARITHMETIC OPERATORS
-// + - * / % **
+// + -> addition
+// - -> subtraction
+// * -> multiplication
+// / -> division
+// % -> modulo
+// ** -> exponentiation
+
+const z = x + y
+// console.log(z)
+
+const z2 = y - x
+
+// console.log(z2)
+
+// const response = prompt("type in anything")
+// const res2 = prompt("type in another thing")
+
+// console.log(response)
+// console.log(res2)
+
+//classwork
+// const num1 = prompt("type in a number")
+// const num2 = prompt("type in another number")
+
+// const mul = num1 * num2
+// console.log(mul)
+
+// console.log("10" + "5")
+
+
 // const num = prompt("type in a number")
 // if (num % 2 == 0) {
 //     console.log("even")
@@ -605,3 +692,108 @@ arr.forEach(function (item) {
 })
 
 console.log(total2)
+
+let word = "javascript"
+let letterToRemove = "a"
+let newWord = ""
+
+// for (let i = 1; i < 8; i++) {
+//     console.log(`${i} x 2 = ${i * 2}`)
+// }
+
+
+// for (let i = 0; i < word.length; i++) {
+//     console.log(`letter at index ${i} is ${word[i]}`)
+//     if (word[i] != letterToRemove) {
+//         newWord += word[i] // newWord = newWord + word[i]
+//     }
+//     console.log(`new word is => ${newWord}`)
+// }
+
+// console.log(newWord)
+
+
+let numbers = [2, 6, 7, 8, 10, 3, 5]
+let total3 = 0;
+// for (let i = 0; i < numbers.length; i++) {
+//     console.log(`before => ${total3}`)
+//     if (numbers[i] % 2 === 0) {
+//         total3 += numbers[i]
+//     }
+//     console.log(`after => ${total3}`)
+// }
+
+//WHILE LOOP
+
+// let i = 0
+// while(condition){
+
+
+//  operation
+// }
+
+const name2 = "John Doe"
+
+let z = 0;
+// while (z < name2.length) {
+//     console.log(name2[z])
+
+//     z++
+// }
+
+
+// let total4 = 0
+// while (z < numbers.length) {
+//     if (numbers[z] % 2 == 0) {
+//         total4 += numbers[z]
+//     }
+//     z++
+// }
+// console.log(total4)
+
+// let d = 20
+// while (d >= 0) {
+//     console.log(d)
+//     d--
+// }
+
+// let i = 5
+
+// while (i >= 0) {
+//     if (i == 0) {
+//         console.log("No cars left")
+//     } else if (i == 1) {
+//         console.log(`${i} car left in the garage`)
+//     } else {
+//         console.log(`${i} cars left in the garage`)
+//     }
+//     i--
+// }
+
+// const arr = [3, 5, 7, 2, 7, 4]
+
+// let i = 0
+// while (i < arr.length) {
+//     if (arr[i] % 2 == 0) {
+//         console.log(arr[i])
+//         break
+//     }
+//     i++
+// }
+
+//OBJECTS
+
+
+const obj1 = {
+    prompt: "Faith",
+    age: 30,
+    occupation: "Instructor",
+
+    introduceYourself: function () {
+        // console.log(this)
+        return `My name is ${this.prompt}. I am ${this.age} years old. I am an ${this.occupation}`
+    }
+}
+
+console.log(obj1.prompt)
+console.log(obj1.introduceYourself())
