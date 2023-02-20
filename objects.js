@@ -1,52 +1,222 @@
+let x = 5; // the "let" keyword allows you to create variables that you can re-assign values to
 
-let x = 5  // the "let" keyword allows you to create variables that you can re-assign values to
+const y = 6; // the "const" keyword allow you to create variables that cannot be changed later
 
-const y = 6 // the "const" keyword allow you to create variables that cannot be changed later
+//DATA TYPES
+// strings
+// numbers
+// booleans (true or false)
+// objects
+// arrays
 
+//STRING
+// // console.log('hello')
+// const str1 = "Hello"
+// const str2 = "100"
+// const str3 = "World"
+
+console.log(str1[0]); // H
+// console.log(typeof str2)
+// console.log(typeof x)
+
+// console.log(str1 + " " + str3)
+
+//classwork
+// const name2 = prompt("type in your name")
+// console.log(`Hello ${name2}`)
+
+// const str4 = "Today is a good day."
+// const str5 = "Today,is,a,good,day"
+//LENGTH
+// console.log(str4.length)
+
+//SPLIT
+const arr1 = str4.split(" ");
+// console.log(arr1)
+
+// const arr2 = str5.split(",")
+// console.log(arr2.length)
+
+//charAt
+console.log(str4.charAt(1));
+
+//indexOf
+console.log(str4.indexOf("T"));
+console.log(str4.indexOf("good"));
+
+//classwork
+// const sentence = prompt("type in a sentence")
+// const arr3 = sentence.split(" ")
+// const numWords = arr3.length
+
+// console.log(`There are ${numWords} words in this sentence`)
+
+//assignment
+
+//first prompt => Today was a fun day
+//second prompt => fun
+// output => The word fun is found at index 12 in the sentence
+
+//NUMBERS
 //ARITHMETIC OPERATORS
-// + - * / % **
+// + -> addition
+// - -> subtraction
+// * -> multiplication
+// / -> division
+// % -> modulo
+// ** -> exponentiation
+
+const z = x + y;
+// console.log(z)
+
+const z2 = y - x;
+
+// console.log(z2)
+
+// const response = prompt("type in anything")
+// const res2 = prompt("type in another thing")
+
+// console.log(response)
+// console.log(res2)
+
+//classwork✔️
+// const num1 = prompt("type in a number")
+// const num2 = prompt("type in another number")
+
+// const mul = num1 * num2
+// console.log(mul)
+
+// classwork
+// const num1 = prompt("type in a number")
+// const num2 = prompt("type in another number")
+
+// console.log(`${num1} raised to power ${num2} is ${num1 ** num2}`)
+
+//classwork
+//first prompt => 5
+//second prompt => 2
+//output => 5 raised to power 2 is 25
+// const num1 = prompt("type in a number")
+// const num2 = prompt("type in another number")
+
+// console.log(`${num1} raised to power ${num2} is ${num1 ** num2}`)
+
+//COMPARISON OPERATORS
+// == -> is equal to
+// != -> not equal to
+// > -> greater than
+// < -> less than
+// >= -> greater than and equals to
+// <= -> less than and equals to
+// === -> is equal to and same type
+
+// const x = 6
+// const y = 7
+
+// console.log(x == y) //false
+// console.log(x != y) //true
+// console.log(x > y)  //false
+// console.log(x < y)
+
+// const z = 7
+
+// console.log(y >= z) //true
+
+// const a = "6"
+
+// console.log(x == a)// true
+// console.log(x === a)// false
+
+//MODULO
+
+// console.log(5 % 2) // 1
+// console.log(6 % 2) // 0
+// console.log(6 % 4) // 2
+
+// console.log(7 % 2 == 0) //false
+// console.log(10 % 2 == 0) //true
+
 // const num = prompt("type in a number")
-// if (num % 2 == 0) {
+
+//CONDITIONALS
+// if(true){
+//     //do something
+// }else{
+//     // do something else
+// }
+
+// if(num % 2 == 0){
 //     console.log("even")
-// } else {
+// }else{
 //     console.log("odd")
 // }
 
-
-//COMPARISON OPERATORS
-
-// == != > < <= >=
-
-
-//LOGICAL OPERATORS
-// &&(AND) ||(OR) !(NOT)
-
-// const age = prompt("type in your age")
-
-// if (age < 13) {
-//     console.log("child")
-// } else if (age >= 13 && age < 20) {
-//     console.log("teenager")
+// classwork1
+// if (num % 5 == 0) {
+//     console.log(`${num} is divisible by 5`)
 // } else {
-//     console.log("adult")
+//     console.log(`${num} is not divisible by 5`)
 // }
 
-//AREA OF A CIRCLE
-// const pi = 3.142;
+//classwork2
 
-// let r = 7;
+// const age = prompt("type in your age")
+// if (age >= 18) {
+//     console.log("You are eligible to vote")
+// } else {
+//     console.log("You are not eligible to vote")
+// }
 
-// const area = pi* r**2;
+//classwork
+// const number = prompt("type in a number")
 
-// console.log(area)
+// if (number == 0) {
+//     console.log("You typed in 0")
+// } else if (number > 0) {
+//     console.log("Positive number")
+// } else {
+//     console.log("Negative number")
+// }
+
+//LOGICAL OPERATORS
+// && -> AND
+// || -> OR
+// ! -> NOT
+
+//AND
+
+// let x = 6
+// let y = 7
+// let z = 8
+
+console.log(x < y && x < z); // true
+console.log(x < y && x > z); //false
+
+console.log(x < y && x < z && y > z); //false
+
+//classwork
+const age = prompt("type in your age");
+
+if (age < 13) {
+  console.log("child");
+} else if (age >= 13 && age <= 19) {
+  console.log("teenager");
+} else {
+  console.log("adult");
+}
 
 
-// const response = prompt("type in a number");
-// console.log(typeof response)
-// console.log(response)
-// const converted = Number(response)
-// console.log(typeof converted)
-// console.log(converted)
+//assignment1
+// const password = prompt("type in a password")
+//check if the password typed is up tp 8 characters
+
+//assignment 2
+//modify the above code to handle errors. if they type in a negative number or a string, we tell them "invalid response"
+
+//assignment 3
+//prompt user for birthyear and tell them if they are a millennial or not (between 1981 and 1996)
+
+
 
 // const time = prompt("What is the time?")
 
@@ -78,47 +248,6 @@ const y = 6 // the "const" keyword allow you to create variables that cannot be 
 // }
 
 
-//STRINGS
-
-const str = "hello there today is wednesday"
-
-// const arr = ["a", "b", "c", 1, 2]
-
-console.log(arr.length)
-console.log(str.split(","))
-
-// const sentence = prompt("type in a sentence")
-
-// const sent_split = sentence.split(" ")
-
-// const numWords = sent_split.length
-
-const str1 = "hello"
-const str2 = " world"
-// console.log("this sentence has "+ numWords+" words in it")
-// console.log(`this sentence has ${numWords} words in it`)
-
-// console.log(str1.concat(str2).concat("javascript "))
-
-const str3 = "javascript is the java of the java javascript is the java of the javajavascript is the java of the javajavascript is the java of the javajavascript is the java of the javajavascript is the java of the javajavascript is the java of the javajavascript is the java of the javajavascript is the java of the java"
-// console.log(str3.replace("java", "python"))
-// console.log(str3.substring(0, 70)+"....")
-
-const str4 = "the sky is blue but was dark yesterday"
-// console.log(str4.indexOf("but"))
-
-// console.log(str4.charAt(1))
-
-const sentence = prompt("type in a sentence")
-const word = prompt("type in a word in that sentence")
-
-const index = sentence.indexOf(word)
-
-console.log(`The word ${word} is found at index ${index} in the string ${sentence}`)
-
-
-// console.log(`the word \"boy\" is for a male being`)
-
 //class work
 //hello,today,is,tuesday
 // const response = prompt("type in comma seperated words")
@@ -126,9 +255,9 @@ console.log(`The word ${word} is found at index ${index} in the string ${sentenc
 // const length = res_arr.length
 
 // console.log(`You typed in ${length} number of words`)
+
+
 // ARRAYS
-
-
 
 // arr[2] = "hello"
 // console.log(arr)
@@ -140,7 +269,6 @@ console.log(`The word ${word} is found at index ${index} in the string ${sentenc
 
 // arr.push("hello")
 // console.log(arr)
-
 
 //unshift
 // arr.unshift("today")
@@ -157,10 +285,9 @@ console.log(`The word ${word} is found at index ${index} in the string ${sentenc
 
 // console.log(arr.slice(-5, -1))
 
-//concat 
-const arr2 = ["p",1, 2, 3, 4, 5, 6, "a","b", 24]
+//concat
+const arr2 = ["p", 1, 2, 3, 4, 5, 6, "a", "b", 24];
 // console.log(arr.concat(arr2))
-
 
 // const first = arr2.slice(0, 1)
 // console.log(first)
@@ -173,7 +300,7 @@ const arr2 = ["p",1, 2, 3, 4, 5, 6, "a","b", 24]
 
 //splice
 
-const arr3 = ["a", "b", "c", "d", "e"]
+const arr3 = ["a", "b", "c", "d", "e"];
 
 // console.log(arr3.splice(0, 3))
 
@@ -190,18 +317,16 @@ const arr3 = ["a", "b", "c", "d", "e"]
 // const howMany = prompt("delete how many?")
 
 // console.log(fruits.splice(index, howMany))
-console.log(arr3)
-arr3.splice(2, 3, "hello")
+console.log(arr3);
+arr3.splice(2, 3, "hello");
 
-console.log(arr3)
+console.log(arr3);
 // console.log(arr3)
 
+//POP
+const arr4 = ["a", "b", "c", "d", "e"];
 
-//POP 
-const arr4 = ["a", "b", "c", "d", "e"]
-
-console.log(arr4.pop())
-
+console.log(arr4.pop());
 
 //SORT
 
@@ -252,8 +377,8 @@ console.log(arr4.pop())
 // const answer = res_arr.join("&")
 // console.log(answer)
 
-const arr7 = [2, 5, 14, 9, 8, 5, 65, 77, 22]
-const words = ["hello", "hi","how"]
+const arr7 = [2, 5, 14, 9, 8, 5, 65, 77, 22];
+const words = ["hello", "hi", "how"];
 // const sep = prompt("type in a seperator")
 // console.log(arr7.sort((a, b)=>a-b).join(sep))
 // 2-5-5-8-9-14-22-65-77
@@ -262,20 +387,20 @@ const words = ["hello", "hi","how"]
 
 // console.log(arr7.reverse())
 
-const response = prompt("type in a word") // civic rotor radar level kayak madam refer rotator
+const response = prompt("type in a word"); // civic rotor radar level kayak madam refer rotator
 
-"civic is a palindrome"
-"hello is not a palindrome"
+("civic is a palindrome");
+("hello is not a palindrome");
 
 //ASSIGNMENT
-//"the quick brown fox jumps over the lazy dog"  => "dog lazy the over jumps fox brown quick the" 
+//"the quick brown fox jumps over the lazy dog"  => "dog lazy the over jumps fox brown quick the"
 
 // console.log("the quick brown fox jumps over the lazy dog".split(" ").reverse().join(" "))
 
 //FUNCTIONS
 
 function sum(a, b) {
-    return (a + b)
+  return a + b;
 }
 
 // sum(3, 5)
@@ -283,9 +408,8 @@ function sum(a, b) {
 // sum(3, 9)
 // sum(123, 5)
 
-
 function sub(a, b) {
-    return (a - b)
+  return a - b;
 }
 
 // // sub(4, 3)
@@ -304,11 +428,11 @@ function sub(a, b) {
 // greet("Peace")
 
 function max(a, b) {
-    if (a > b) {
-        console.log(`${a} is larger than ${b}`)
-    } else {
-        console.log(`${b} is larger than ${a}`)
-    }
+  if (a > b) {
+    console.log(`${a} is larger than ${b}`);
+  } else {
+    console.log(`${b} is larger than ${a}`);
+  }
 }
 
 // max(23, 20)
@@ -330,11 +454,10 @@ function max(a, b) {
 // numWords("today is a good day") // 7 words in this sentence
 // numWords("good day to code") // 7 words in this sentence
 
-
 function areaOfCircle(r) {
-    const pi = 3.142
+  const pi = 3.142;
 
-    console.log(pi * r * r)
+  console.log(pi * r * r);
 }
 
 // const area = areaOfCircle(7)
@@ -342,29 +465,25 @@ function areaOfCircle(r) {
 // console.log(area + 7)
 
 function bmiCalculator(weight, height) {
-    //less than 18.5 => underweight
-    // between 18.5 and 24.9 => normal weight
-    // anything else => overweight
+  //less than 18.5 => underweight
+  // between 18.5 and 24.9 => normal weight
+  // anything else => overweight
 
-    const bmi = weight / (height * height)
+  const bmi = weight / (height * height);
 
-    if (bmi < 18.5) {
-        return "Underweight"
-    } else if (bmi >= 18.5 && bmi <= 24.9) {
-        return "Normal weight"
-    } else {
-        return "Overweight"
-    }
+  if (bmi < 18.5) {
+    return "Underweight";
+  } else if (bmi >= 18.5 && bmi <= 24.9) {
+    return "Normal weight";
+  } else {
+    return "Overweight";
+  }
 }
 
 // const response = bmiCalculator(100, 2)
 // console.log(response)
 
-
-
 // console.log(calculator(sub, 4, 6))
-
-
 
 // // const calculator = function (fn, a, b) {
 // //     return fn(a, b)
@@ -386,7 +505,6 @@ function bmiCalculator(weight, height) {
 // console.log(x)
 // console.log(y)
 
-
 //EXAMPLE 2
 
 // let x = 10
@@ -397,7 +515,6 @@ function bmiCalculator(weight, height) {
 // console.log(x)
 // myFunc()
 // console.log(x)
-
 
 /*
 //EXAMPLE 3
@@ -511,65 +628,61 @@ concatenate() // hello defaulf
 // console.log("hello")
 
 function isLeapYear(year) {
-    if (year % 4 == 0) {
-        if (year % 100 == 0) {
-            if (year % 400 == 0) {
-                console.log("leap year")
-            } else {
-                console.log("not leap year")
-            }
-        } else {
-            console.log("leap year")
-        }
+  if (year % 4 == 0) {
+    if (year % 100 == 0) {
+      if (year % 400 == 0) {
+        console.log("leap year");
+      } else {
+        console.log("not leap year");
+      }
     } else {
-        console.log("not leap year")
+      console.log("leap year");
     }
+  } else {
+    console.log("not leap year");
+  }
 }
 
 //FOR LOOPS
 
 /**
  * for (initialization ; condition ; operation){
- *      //code 
+ *      //code
  * }
  */
 
-const str5 = "Hello World"
+const str5 = "Hello World";
 
 for (let i = 0; i < str5.length; i++) {
-    // console.log(str5[i])
+  // console.log(str5[i])
 }
 
 for (let i = 0; i <= 10; i++) {
-    // console.log(i)
+  // console.log(i)
 }
 
 //classwork
 for (let i = 20; i >= 0; i--) {
-    // console.log(i)
+  // console.log(i)
 }
 
-
-let word4 = "javascript"
-let letter = "a"
+let word4 = "javascript";
+let letter = "a";
 // let newWord = ""
-let count = 0
+let count = 0;
 
 for (let i = 0; i < word4.length; i++) {
-    if (letter == word4[i]) {
-        count++
-    }
+  if (letter == word4[i]) {
+    count++;
+  }
 }
 // console.log(count)
 
-
-let total = 0
+let total = 0;
 for (let i = 0; i <= 10; i++) {
-    total += i //total = total + i
+  total += i; //total = total + i
 }
 // console.log(total)
-
-
 
 // const arr = [3, 6, 7, 8, 9, 10]
 // let total2 = 0
@@ -597,11 +710,279 @@ for (let i = 0; i <= 10; i++) {
 // let newWord = ""
 
 
-const arr = [3, 6, 7, 8, 9, 10]
-let total2 = 0
+// for (let i = 1; i < 8; i++) {
+//     console.log(`${i} x 2 = ${i * 2}`)
+// }
 
-arr.forEach(function (item) {
-    total2 += item
-})
 
-console.log(total2)
+// for (let i = 0; i < word.length; i++) {
+//     console.log(`letter at index ${i} is ${word[i]}`)
+//     if (word[i] != letterToRemove) {
+//         newWord += word[i] // newWord = newWord + word[i]
+//     }
+//     console.log(`new word is => ${newWord}`)
+// }
+
+// console.log(newWord)
+
+
+let numbers = [2, 6, 7, 8, 10, 3, 5]
+let total3 = 0;
+// for (let i = 0; i < numbers.length; i++) {
+//     console.log(`before => ${total3}`)
+//     if (numbers[i] % 2 === 0) {
+//         total3 += numbers[i]
+//     }
+//     console.log(`after => ${total3}`)
+// }
+
+//WHILE LOOP
+
+// let i = 0
+// while(condition){
+
+
+//  operation
+// }
+
+const name2 = "John Doe"
+
+// let z = 0;
+// while (z < name2.length) {
+//     console.log(name2[z])
+
+//     z++
+// }
+
+
+// let total4 = 0
+// while (z < numbers.length) {
+//     if (numbers[z] % 2 == 0) {
+//         total4 += numbers[z]
+//     }
+//     z++
+// }
+// console.log(total4)
+
+// let d = 20
+// while (d >= 0) {
+//     console.log(d)
+//     d--
+// }
+
+// let i = 5
+
+// while (i >= 0) {
+//     if (i == 0) {
+//         console.log("No cars left")
+//     } else if (i == 1) {
+//         console.log(`${i} car left in the garage`)
+//     } else {
+//         console.log(`${i} cars left in the garage`)
+//     }
+//     i--
+// }
+
+// const arr = [3, 5, 7, 2, 7, 4]
+
+// let i = 0
+// while (i < arr.length) {
+//     if (arr[i] % 2 == 0) {
+//         console.log(arr[i])
+//         break
+//     }
+//     i++
+// }
+
+//OBJECTS
+
+const obj1 = {
+    name: "Edison",
+    age: 30,
+    occupation: "Instructor",
+
+    introduceYourself: function () {
+        // console.log(this)
+        return `My name is ${this.name}. I am ${this.age} years old. I am an ${this.occupation}`
+    }
+}
+
+// console.log(obj1.name)
+// console.log(obj1.introduceYourself())
+
+const car = {
+    make: "Toyota",
+    model: "Camry",
+    year: 2017,
+    color: "red",
+    started: false,
+    speed: 0,
+    distCovered: 0,
+    start: function () {
+        console.log("starting car...")
+        this.started = true;
+    },
+    stop: function () {
+        if (this.started == true) {
+            console.log("stopping car...")
+            this.started = false
+        } else {
+            console.log("Car not started")
+        }
+    },
+    //classwork
+    accelerate: function () {
+        if (this.started == true) {
+            this.speed += 5;
+            this.distCovered += 100
+            console.log(`${this.make} going at ${this.speed}km/h`)
+            console.log(`distance covered is ${this.distCovered}m`)
+        } else {
+            console.log("Car not started")
+        }
+    },
+    //classwork
+    brake: function () {
+        if (this.started == true) {
+            this.speed -= 3;
+            console.log(`${this.make} going at ${this.speed}km/h`)
+        } else {
+            console.log("Car not started")
+        }
+    },
+    //assignment
+    reverse: function () {
+
+    }
+}
+// }
+// console.log(car)
+// car.start()
+// // car.stop()
+
+// car.accelerate()// Toyota moving at 5km/h
+// //Distance covered is 100m
+
+// car.accelerate()// Toyota moving at 10km/h
+// //Distance covered is 200m
+// car.accelerate()// Toyota moving at 15km/h
+// //Distance covered is 300m
+
+// car.brake()  //Toyota going at 12km/h 
+// car.brake()  //Toyota going at 9km/h  
+// car.brake()  //Toyota going at 6km/h  
+
+
+const employee = {
+    name: "John",
+    title: "Sales Manager",
+    salary: 100000,
+    annualSalary: function () {
+        return this.salary * 12
+    }
+}
+
+//MODIFYING OBJECTS
+console.log(employee.name) //John
+console.log(employee.title) //Sales manager
+
+employee.name = "Edison"
+employee.salary = 20000
+console.log(employee)
+
+delete employee.salary
+console.log(employee)
+
+const account = {
+    name: "Peace",
+    accountBalance: 2000000,
+    deposit: function (amt) {
+        this.accountBalance += amt;
+        console.log(`${this.name} deposited $${amt}. Current Balance: $${this.accountBalance}`)
+    },
+    withdraw: function (amt) {
+        // if (this.accountBalance != 0 && amt <= this.accountBalance) {
+        //     this.accountBalance -= amt;
+        //     console.log(`${this.name} withdrew $${amt}. Current Balance: $${this.accountBalance}`)
+        // }else{
+        //     console.log("Insufficient funds")
+        // }
+
+        if (this.accountBalance == 0) {
+            console.log("No money in your account")
+        } else if (amt > this.accountBalance) {
+            console.log("Insufficient funds")
+        } else {
+            this.accountBalance -= amt;
+            console.log(`${this.name} withdrew $${amt}. Current Balance: $${this.accountBalance}`)
+        }
+    }
+}
+
+account.deposit(200000) //Peace deposited $200000. Current balance: $2200000
+account.deposit(50000) //Peace deposited $50000. Current balance: $2250000
+
+const person = {
+    name: "Edison",
+    relatives: [
+        { name: "Ada", role: "mother" },
+        { name: "Edison", role: "father" },
+        { name: "Brian", role: "brother" }
+    ],
+    previousJobs: ["Sales", "hr", "receptionist"],
+    age: 40,
+    addRelative: function (name, role) {
+        const relative = {
+            name: name,
+            role: role
+        }
+        this.relatives.push(relative)
+    },
+    //assignment
+    addJob: function (name) {
+
+    }
+}
+
+console.log(person)
+person.addRelative("emeka", "cousin")
+console.log(person)
+// person.addJob("pilot")
+person.previousJobs[2] = "attendant"
+console.log(person)
+
+
+const movieLibrary = {
+    collections: [
+        {
+            name: "Action",
+            movies: [
+                { name: "Black Panther", releaseYear: 2022 },
+                { name: "Thor", releaseYear: 2019 }
+            ]
+        },
+        {
+            name: "Series",
+            movies: [
+                { name: "Euphoria", releaseYear: 2020 },
+                { name: "Prison Break", releaseYear: 2005 }
+            ]
+        },
+
+    ],
+    //assignment
+    addCollection: function(name){
+
+    },
+    //assignment
+    addMovie: function(name, releaseYear, collectionName){
+
+    }
+}
+
+console.log(movieLibrary)
+
+movieLibrary.addCollection("Horror")
+console.log(movieLibrary.collections)
+movieLibrary.addMovie("Ant man", 2020, "Action")
+
