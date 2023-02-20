@@ -15,7 +15,8 @@ const y = 6; // the "const" keyword allow you to create variables that cannot be
 // const str2 = "100"
 // const str3 = "World"
 
-console.log(str1[0]); // H
+
+console.log(str1[0])  // H
 // console.log(typeof str2)
 // console.log(typeof x)
 
@@ -713,6 +714,7 @@ for (let i = 0; i <= 10; i++) {
 // for (let i = 1; i < 8; i++) {
 //     console.log(`${i} x 2 = ${i * 2}`)
 // }
+
 
 
 // for (let i = 0; i < word.length; i++) {
