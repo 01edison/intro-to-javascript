@@ -297,11 +297,11 @@ const z2 = y - x;
 // let y = 7
 // let z = 8
 
-console.log(x < y || x < z); // true
-console.log(x < y || x > z); // true
+// console.log(x < y || x < z); // true
+// console.log(x < y || x > z); // true
 
-console.log(x < y || y < z || x > z); // true
-console.log(x > y || y > z); //false
+// console.log(x < y || y < z || x > z); // true
+// console.log(x > y || y > z); //false
 
 // classwork
 
@@ -352,7 +352,7 @@ function introduceYourself(name, age) {
   console.log(`Hello, my name is ${name} and I am ${age} years old.`);
 }
 
-introduceYourself("Fulfilled", 27);
+// introduceYourself("Fulfilled", 27);
 
 //assignment
 function max(a, b) {
@@ -441,7 +441,7 @@ function bmiCalculator(weight, height) {
 const greet = function (name) {
   console.log(`hello, ${name}`);
 };
-greet("edison");
+// greet("edison");
 
 //SCOPE
 //EXAMPLE 1
@@ -769,6 +769,14 @@ const words = ["hello", "hi", "how"];
 // const negatives = numbers.map((num) => -num);
 // console.log(negatives); // [-1, -2, -3, -4, -5]
 
+//classwork 1
+
+// const addedH = numbers.map(function (num) {
+//   return num + "h";
+// });
+
+// console.log(addedH);
+
 // example 4
 // const strings = ['hello', 'world', 'foo', 'bar'];
 // const lengths = strings.map(str => str.length);
@@ -789,9 +797,15 @@ const words = ["hello", "hi", "how"];
 // console.log(uppercased); // ['HELLO', 'WORLD', 'FOO', 'BAR']
 
 //example 7
-const strings = ["hello", "world", "foo", "bar"];
-const firstChars = strings.map((str) => str[0]);
-console.log(firstChars); // ['h', 'w', 'f', 'b']
+// const strings = ["hello", "world", "foo", "bar"];
+// const firstChars = strings.map((str) => str[0]);
+// console.log(firstChars); // ['h', 'w', 'f', 'b']
+
+// const reversed = strings.map(function (str) {
+//   return str.split("").reverse().join("");
+// });
+
+// console.log(reversed);
 
 //example 7
 // const numbers = [1, 2, 3, 4, 5];
@@ -815,12 +829,112 @@ console.log(firstChars); // ['h', 'w', 'f', 'b']
 // });
 
 //example 3
+// const numbers = [10, 20, 30, 40, 50];
+// const filteredNumbers = numbers.filter(num => num >= 30);
+// console.log(filteredNumbers); // Output: [30, 40, 50]
+
+//example 4
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // const evenNumbers = numbers.filter((number) => number % 2 === 0);
 // console.log(evenNumbers); // [2, 4, 6, 8]
 
+//example 5
+// const words = ["apple", "banana", "cherry", "orange", "kiwi"];
+// const filteredWords = words.filter((word) => word.includes("a"));
+// console.log(filteredWords); // ["apple", "banana", "orange"]
 
+//example 6
+// const names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve'];
+// const filteredNames = names.filter(name => name[0] !== 'D');
+// console.log(filteredNames); // Output: ['Alice', 'Bob', 'Charlie', 'Eve']
 
+//example 7
+// const people = [
+//   { name: "John", age: 25 },
+//   { name: "Mary", age: 17 },
+//   { name: "Tom", age: 32 },
+//   { name: "Kate", age: 15 },
+// ];
+// const adults = people.filter((person) => person.age >= 18);
+// console.log(adults); // [{ name: "John", age: 25 }, { name: "Tom", age: 32 }]
+
+//DESTRUCTURING
+//a technique of unpacking the content of a an array or object
+
+//ARRAYS
+//example 1
+// const numbers = [1, 2, 3];
+// const [a, b, c] = numbers;
+// // console.log(a); // 1
+// console.log(b); // 2
+// console.log(c); // 3
+
+//OBJECTS
+//example 1
+const user = {
+  firstName: "John",
+  lastName: "Doe",
+  email: "johndoe@example.com",
+};
+
+const { firstName, lastName, email } = user;
+console.log(firstName);
+console.log(lastName);
+console.log(email);
+
+//example 2
+// const animals = [
+//   { name: "cat", sound: "meow" },
+//   { name: "dog", sound: "woof" },
+// ];
+
+// const [cat, dog] = animals;
+// // console.log(cat);
+// // console.log(dog);
+
+// const { name, sound } = cat;
+// console.log(name); // cat
+// console.log(sound); // meow
+
+// show that renaming the variable can be important
+
+// const { name: dogName, sound: dogSound } = dog;
+
+//Nested objects
+const animals = [
+  { name: "cat", sound: "meow", foodRequirements: { food: 2, water: 3 } },
+  { name: "dog", sound: "woof" },
+];
+
+//Omitting a value
+const numbers = [1, 2, 3, 4, 5];
+const [first, second, , fourth] = numbers;
+console.log(first); // 1
+console.log(second); // 2
+console.log(fourth); // 4
+
+//SPREAD OPERATOR
+
+const citrus = ["Lime", "Lemon", "Orange"];
+
+// const fruits = ["Apple", "Banana", "Coconut"];
+
+// //boring way of doing it
+
+// for (let i = 0; i < citrus.length; i++) {
+//   fruits.push(citrus[i]);
+// }
+
+// console.log(fruits)
+
+// much better way
+// const fruits = ["Apple", "Banana", "Coconut", ...citrus];
+
+// console.log(fruits)
+
+// const str = "hello"
+
+// console.log([...str])
 
 //FOR LOOPS
 
@@ -1304,10 +1418,14 @@ class Person {
     this.gender = gender;
   }
 
+  greet() {
+    console.log(`Hello, nice to meet you!`);
+  }
   introduceYourself() {
     return `Hello my name is ${this.name}. I am ${this.age} years old. I am a ${this.gender}`;
   }
 
+  //classwork
   ageInFiveYears() {
     return `In 5 years, I will be ${this.age + 5} years old`;
   }
@@ -1324,6 +1442,23 @@ console.log(john.ageInFiveYears()); // In 5 years I will be 35 years old
 
 // console.log(john.introduceYourself())
 // console.log(mary.introduceYourself())
+
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  getArea() {
+    return this.width * this.height;
+  }
+
+  getPerimeter() {
+    return 2 * (this.width + this.height);
+  }
+}
+
+const rectangle1 = new Rectangle(3, 4);
 
 class Car {
   constructor(make, year) {
@@ -1364,6 +1499,41 @@ const car1 = new Car("Toyota", 2020);
 // const car2 = new Car("Mercedes", 2005)
 // console.log(car2)
 // console.log(car2.displayInfo())
+
+class TodoList {
+  constructor() {
+    this.items = [];
+  }
+
+  addItem(item) {
+    this.items.push(item);
+    console.log(`"${item}" has been added to the list.`);
+  }
+
+  removeItem(item) {
+    const index = this.items.indexOf(item);
+    if (index === -1) {
+      console.log(`"${item}" is not in the list.`);
+    } else {
+      this.items.splice(index, 1);
+      console.log(`"${item}" has been removed from the list.`);
+    }
+  }
+
+  showItems() {
+    console.log(`Todo List: ${this.items.join(", ")}`);
+  }
+}
+
+// Creating a new todo list
+const todoList1 = new TodoList();
+
+// Using the methods
+todoList1.addItem("Buy groceries"); // Output: "Buy groceries" has been added to the list.
+todoList1.addItem("Do laundry"); // Output: "Do laundry" has been added to the list.
+todoList1.showItems(); // Output: Todo List: Buy groceries, Do laundry
+todoList1.removeItem("Go to gym"); // Output: "Go to gym" is not in the list.
+todoList1.removeItem("Do laundry"); // Output: "Do laundry" has been removed from the list.
 
 class BankAccount {
   #pin;
