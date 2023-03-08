@@ -871,16 +871,16 @@ const words = ["hello", "hi", "how"];
 
 //OBJECTS
 //example 1
-const user = {
-  firstName: "John",
-  lastName: "Doe",
-  email: "johndoe@example.com",
-};
+// const user = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   email: "johndoe@example.com",
+// };
 
-const { firstName, lastName, email } = user;
-console.log(firstName);
-console.log(lastName);
-console.log(email);
+// const { firstName, lastName, email } = user;
+// console.log(firstName);
+// console.log(lastName);
+// console.log(email);
 
 //example 2
 // const animals = [
@@ -907,11 +907,11 @@ const animals = [
 ];
 
 //Omitting a value
-const numbers = [1, 2, 3, 4, 5];
-const [first, second, , fourth] = numbers;
-console.log(first); // 1
-console.log(second); // 2
-console.log(fourth); // 4
+// const numbers = [1, 2, 3, 4, 5];
+// const [first, second, , fourth] = numbers;
+// console.log(first); // 1
+// console.log(second); // 2
+// console.log(fourth); // 4
 
 //SPREAD OPERATOR
 
@@ -1433,7 +1433,7 @@ class Person {
 
 const john = new Person("John", 30, "Male");
 
-console.log(john.ageInFiveYears()); // In 5 years I will be 35 years old
+// console.log(john.ageInFiveYears()); // In 5 years I will be 35 years old
 // const mary = new Person("Mary", 22, "Female")
 // console.log(john)
 // console.log(john.introduceYourself())
@@ -1453,12 +1453,27 @@ class Rectangle {
     return this.width * this.height;
   }
 
+  //classwork
   getPerimeter() {
     return 2 * (this.width + this.height);
   }
 }
 
-const rectangle1 = new Rectangle(3, 4);
+// const rectangle1 = new Rectangle(3, 4);
+
+// console.log(rectangle1.getArea())
+// console.log(rectangle1.getPerimeter())
+
+//classwork
+// class Circle{
+//   constructor(radius){
+//     this.radius = radius
+//   }
+
+//   getArea(){
+//     return 3.142 * this.radius ** 2
+//   }
+// }
 
 class Car {
   constructor(make, year) {
@@ -1477,6 +1492,7 @@ class Car {
     this.started = true;
   }
 
+  //classwork
   accelerate() {
     this.speed += 10;
     console.log(`${this.make} going at ${this.speed} km/h`);
@@ -1511,17 +1527,11 @@ class TodoList {
   }
 
   removeItem(item) {
-    const index = this.items.indexOf(item);
-    if (index === -1) {
-      console.log(`"${item}" is not in the list.`);
-    } else {
-      this.items.splice(index, 1);
-      console.log(`"${item}" has been removed from the list.`);
-    }
+   
   }
 
   showItems() {
-    console.log(`Todo List: ${this.items.join(", ")}`);
+   
   }
 }
 
@@ -1529,11 +1539,13 @@ class TodoList {
 const todoList1 = new TodoList();
 
 // Using the methods
-todoList1.addItem("Buy groceries"); // Output: "Buy groceries" has been added to the list.
-todoList1.addItem("Do laundry"); // Output: "Do laundry" has been added to the list.
-todoList1.showItems(); // Output: Todo List: Buy groceries, Do laundry
-todoList1.removeItem("Go to gym"); // Output: "Go to gym" is not in the list.
-todoList1.removeItem("Do laundry"); // Output: "Do laundry" has been removed from the list.
+// todoList1.addItem("Buy groceries"); // Output: "Buy groceries" has been added to the list.
+// todoList1.addItem("Do laundry"); // Output: "Do laundry" has been added to the list.
+// todoList1.showItems(); // Output: Todo List: Buy groceries, Do laundry
+// todoList1.removeItem("Go to gym"); // Output: "Go to gym" is not in the list.
+// todoList1.removeItem("Do laundry"); // Output: "Do laundry" has been removed from the list.
+
+//Encapsulation
 
 class BankAccount {
   #pin;
@@ -1594,7 +1606,7 @@ class Parent {
 const parent1 = new Parent("Austin", 35);
 
 // console.log(parent1)
-console.log(parent1.sayName());
+// console.log(parent1.sayName());
 
 class Child extends Parent {
   constructor(name, age, friends) {
@@ -1634,4 +1646,4 @@ class ElectricCar extends Car {
 }
 
 const electricCar1 = new ElectricCar("Tesla", 2020, 70, "Model X");
-console.log(electricCar1.accelerate()); //Tesla going at 10km/h and battery level at 65%
+// console.log(electricCar1.accelerate()); //Tesla going at 10km/h and battery level at 65%
