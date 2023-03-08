@@ -575,17 +575,14 @@ const add5 = (x, y = 5) => {
 // greet("Ebuka")
 // greet()
 
-
 //assignment 1
-function concatenate(input1 = "hello", input2 = "default"){
-  
-}
+function concatenate(input1 = "hello", input2 = "default") {}
 
-concatenate('hi') //hi default
-concatenate("welcome") //welcome default
-concatenate("hello","world") //hello world
-concatenate("goodday","Jim") //goodday Jim
-concatenate() // hello default
+concatenate("hi"); //hi default
+concatenate("welcome"); //welcome default
+concatenate("hello", "world"); //hello world
+concatenate("goodday", "Jim"); //goodday Jim
+concatenate(); // hello default
 
 //assignment 2
 //create a function that tells you whether a year is a leap year or not
@@ -933,6 +930,7 @@ const animals = [
 
 //SPREAD OPERATOR
 
+//example 1
 const citrus = ["Lime", "Lemon", "Orange"];
 
 // const fruits = ["Apple", "Banana", "Coconut"];
@@ -950,10 +948,49 @@ const citrus = ["Lime", "Lemon", "Orange"];
 
 // console.log(fruits)
 
+// const fruits2 = ["Apple",...citrus, "Banana", "Coconut", ];
+
+// console.log(fruits2)
+
+//example 2
+
 // const str = "hello"
 
 // console.log([...str])
 
+//example 3
+const fullName = {
+  fName: "James",
+  lName: "Bond",
+};
+
+// const user = {
+//   ...fullName,
+//   id: 1,
+//   userName: "jamesbond007",
+// };
+
+//why you cant do it like this, because it'll be nested
+const user = {
+  fullName,
+  id: 1,
+  userName: "jamesbond007",
+};
+
+console.log(user);
+
+//ARRAY SYNTAXING FOR OBJECTS
+
+const person = {
+  name: "Edison",
+  age: 40,
+  gender: "male",
+};
+
+// person.occupation = "developer"
+person["occupation"] = "developer"
+
+console.log(person)
 //FOR LOOPS
 
 /**
@@ -1101,6 +1138,25 @@ const name2 = "John Doe";
 // }
 
 //OBJECTS
+// const employee = {
+//   name: "John",
+//   title: "Sales Manager",
+//   salary: 100000,
+//   annualSalary: function () {
+//     return this.salary * 12;
+//   },
+// };
+
+// //MODIFYING OBJECTS
+// console.log(employee.name); //John
+// console.log(employee.title); //Sales manager
+
+// employee.name = "Edison";
+// employee.salary = 20000;
+// console.log(employee);
+
+// delete employee.salary;
+// console.log(employee);
 
 // const obj1 = {
 //   name: "Edison",
@@ -1175,26 +1231,6 @@ const name2 = "John Doe";
 // // car.brake()  //Toyota going at 12km/h
 // // car.brake()  //Toyota going at 9km/h
 // // car.brake()  //Toyota going at 6km/h
-
-// const employee = {
-//   name: "John",
-//   title: "Sales Manager",
-//   salary: 100000,
-//   annualSalary: function () {
-//     return this.salary * 12;
-//   },
-// };
-
-// //MODIFYING OBJECTS
-// console.log(employee.name); //John
-// console.log(employee.title); //Sales manager
-
-// employee.name = "Edison";
-// employee.salary = 20000;
-// console.log(employee);
-
-// delete employee.salary;
-// console.log(employee);
 
 // const account = {
 //   name: "Peace",
@@ -1501,9 +1537,9 @@ class Rectangle {
 //   }
 // }
 
-const circle = new Circle(7);
-console.log(circle);
-console.log(circle.getArea()); // 153.958
+// const circle = new Circle(7);
+// console.log(circle);
+// console.log(circle.getArea()); // 153.958
 
 class Car {
   constructor(make, year) {
