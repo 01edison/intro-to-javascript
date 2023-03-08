@@ -489,90 +489,108 @@ console.log(x) // 10 (note: we got 10 here because let x = 5 was declared again 
 //5
 //10
 
-/*
-//SCOPE EXAMPLE 4
-let x = 10
-function myFunction (){
-    let x = 5
-    function myInnerFunction(){
-        console.log(x)
-    }
-    myInnerFunction()
-}
-console.log(x) // 10
-myFunction() // 10
+//EXAMPLE 4
+// const x = 10;
+// function myFunc() {
+//   let x = 5;
+//   console.log(x);
+//   function myInnerFunc() {
+//     let x = 2;
+//     console.log(x);
 
-classwork
-function areaOfTriangle(base, height){
-    let area = (0.5* base * height);
-    return area
-}
-console.log(areaOfTriangle(7,8)) // 28
-*/
+//     function mySecondInner() {
+//       let x = 4;
+//       console.log(x);
+//     }
+//     mySecondInner();
+//   }
 
-/*
-function Farenheit(celcius){
-    const area = (celcius*9/5)+32
-    return area
-}
-console.log(Farenheit(37)) // 98.6
-*/
-//TEACH THEM ABOUT ARRAYS AND COME BACK TO THIS
-/*
+//   myInnerFunc();
+// }
+// console.log(x);
+// myFunc();
+
+//create a function that takes in 2 parameters (base, height) and returns the area
+
+// function areaOfTriangle(base, height) {
+//   const area = 0.5 * base * height;
+//   return area;
+//   // console.log(area)
+// }
+
+//ARROW FUNCTIONS
+const areaOfTriangle = (base, height) => {
+  const area = 0.5 * base * height;
+  return area;
+};
+
+// console.log(areaOfTriangle(7, 8))
+
+//create a function that takes in a value in Celcius and returns it in farenheit
+
+const toFarenheit = (celcius) => {
+  const farenheit = (celcius * 9) / 5 + 32;
+  return farenheit;
+};
+
+// console.log(toFarenheit(37)) //98.6
+
+//DEFAULT PARAMETERS
+
+const add5 = (x, y = 5) => {
+  return x + y;
+};
+
+// console.log(add5(5)); // 10
+// console.log(add5(5, 7)); // 12
+// console.log(add5(15)); // 20
+
+// const sub3 = (x, y = 3) => {
+//   return x - y;
+// };
+
+// console.log(sub3(7)); // 4
+// console.log(sub3(5, 5)); // 0
+
+// const mul = (first, second, third = 4) => {
+//   return first * second * third;
+// };
+
+// // console.log(mul(2, 2)) //16
+// // console.log(mul(2, 2, 3)) //12
+
+//NOT LAST PARAMETER SET TO DEFAULT
+// const mul = (x, y = 4, z) => {
+//   return x * y * z;
+// };
+
+// console.log(mul(5, undefined, 2)); //40
+// console.log(mul(5, 4, 2));
+
+// const greet = (name = "stranger") => {
+//   console.log(`hello ${name}`);
+// };
+
+// greet("Edison");
+// greet("Ebuka")
+// greet()
 
 
-//DEFAULT PARAMETER
-/*
-function add5 (x, y = 5){
-    return x + y
-}
-console.log(add5(5))// 10 
-console.log(add(5,10)) //15
-console.log(add5(15))// 20
-*/
-
-/*
-function multiplyBy3 (x = 5, y){
-    return x * y
-}
-console.log(multiplyBy3(undefined,5)) // 25 
-console.log(multiplyBy3(5,10)) // 50
-console.log(multiplyBy3(undefined,20))// 100
-*/
-
-/*
-function multiplyBy3 (x, y = 3){
-    return x * y
-}
-console.log(multiplyBy3(5)) // 15 
-console.log(multiplyBy3(5,10)) // 50
-console.log(multiplyBy3(20))// 60
-*/
-
-/*
-function greet(name = "stranger"){
-    console.log(`hello ${name}`)
-}
-greet() // hello stranger
-greet("") // hello
-*/
-
-/*
-//CLASS WORK
+//assignment 1
 function concatenate(input1 = "hello", input2 = "default"){
-    console.log(`${input1} ${input2}`)
-
+  
 }
+
 concatenate('hi') //hi default
 concatenate("welcome") //welcome default
 concatenate("hello","world") //hello world
 concatenate("goodday","Jim") //goodday Jim
 concatenate() // hello default
-*/
 
-// www.https://mathisfun.com/leap-years
+//assignment 2
+//create a function that tells you whether a year is a leap year or not
 
-// console.log("hello")
+//https://www.mathsisfun.com/leap-years.html
 
 function isLeapYear(year) {
   if (year % 4 == 0) {
@@ -1427,21 +1445,27 @@ class Person {
 
   //classwork
   ageInFiveYears() {
+    // this.age +=//this.age = this.age + 5
     return `In 5 years, I will be ${this.age + 5} years old`;
   }
 }
 
 const john = new Person("John", 30, "Male");
 
-// console.log(john.ageInFiveYears()); // In 5 years I will be 35 years old
-// const mary = new Person("Mary", 22, "Female")
-// console.log(john)
-// console.log(john.introduceYourself())
-// console.log(mary)
-// console.log(mary.introduceYourself())
+// const person1 = new Person("John", 30, "male");
+// console.log(person1);
+// person1.greet();
+// console.log(person1.introduceYourself());
+// console.log(person1.ageInFiveYears()); // In 5 years, I will be 35 years old
+// console.log(person1.ageInFiveYears()); // In 5 years, I will be 35 years old
+// console.log(person1);
 
-// console.log(john.introduceYourself())
-// console.log(mary.introduceYourself())
+// const person2 = new Person("Mary", 22, "female");
+// console.log(person2);
+// person2.greet();
+// console.log(person2.introduceYourself())
+// console.log(person2.ageInFiveYears()) // In 5 years, I will be 27 years old
+// console.log(person2);
 
 class Rectangle {
   constructor(width, height) {
@@ -1468,12 +1492,18 @@ class Rectangle {
 // class Circle{
 //   constructor(radius){
 //     this.radius = radius
+//     this.pi = 3.142; // constant property
 //   }
 
 //   getArea(){
 //     return 3.142 * this.radius ** 2
+//     return this.pi * this.radius **2
 //   }
 // }
+
+const circle = new Circle(7);
+console.log(circle);
+console.log(circle.getArea()); // 153.958
 
 class Car {
   constructor(make, year) {
@@ -1494,8 +1524,12 @@ class Car {
 
   //classwork
   accelerate() {
-    this.speed += 10;
-    console.log(`${this.make} going at ${this.speed} km/h`);
+    if (this.started == true) {
+      this.speed += 10;
+      console.log(`${this.make} going at ${this.speed}km/h`);
+    } else {
+      console.log("Car not started");
+    }
   }
 
   brake() {
@@ -1516,6 +1550,7 @@ const car1 = new Car("Toyota", 2020);
 // console.log(car2)
 // console.log(car2.displayInfo())
 
+//assignment
 class TodoList {
   constructor() {
     this.items = [];
@@ -1526,13 +1561,9 @@ class TodoList {
     console.log(`"${item}" has been added to the list.`);
   }
 
-  removeItem(item) {
-   
-  }
+  removeItem(item) {}
 
-  showItems() {
-   
-  }
+  showItems() {}
 }
 
 // Creating a new todo list
